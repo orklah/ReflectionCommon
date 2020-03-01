@@ -28,7 +28,7 @@ jobs:
         - travis_retry wget --no-verbose https://phar.io/releases/phive.phar
         - travis_retry php phive.phar --no-progress install --trust-gpg-keys 8E730BA25823D8B5 phpstan
       script:
-        - ./tools/phpstan analyse src --level max --configuration phpstan.neon
+        - ./tools/phpstan analyse src --configuration phpstan.neon
 
     - stage: analysis
       php: 7.1
